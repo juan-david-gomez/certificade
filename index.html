@@ -1,0 +1,22 @@
+<!doctype html>
+<html ng-app="app">
+  <head>
+    <meta charset="utf-8" />
+    <title>AngularJS Plunker</title>
+    <script>document.write('<base href="' + document.location + '" />');</script>
+    <link rel="stylesheet" href="simple-grid/simple-grid.css" />
+    <script data-require="angular.js@1.2.x" src="https://code.angularjs.org/1.2.25/angular.js" data-semver="1.2.25"></script>
+    <script data-require="jquery@*" data-semver="2.1.1" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+    <script src="simple-grid/simple-grid.js"></script>
+  </head>
+
+  <body ng-controller="MainCtrl">
+    <p>Hello</p>
+    <input type="file" file-reader="handleData" />
+    <input type="text" ng-model="delimiter" >
+    <button ng-click="sendData()">Enviar data</button>
+    <div simple-grid="myGridConfig"></div>
+    <script type="text/ng-template" id="simple-grid.html" src="simple-grid/simple-grid.html"></script>
+  </body>
+</html>
